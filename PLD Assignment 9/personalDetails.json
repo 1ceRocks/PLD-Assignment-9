@@ -18,20 +18,17 @@
     ],
     "academicBackground": [
         {
-        "Kindergarten": "The Children's Courtyard",
         "Elementary (1st to 6th Grade)": "City Tree Christian School",
         "Middle School (1st to 4th Year)": "Lashon Academy TK",
         "Senior High School (11th to 12th Grade)": "Los Angeles High School",
         "College (RECENT)": "Harvard University"
         }
     ],
-    "kindergartenAchievement/s": [
+    "elementaryAchievement/s": [
+        "Christmas Jingle Champion",
         "Best in Writing",
         "Most Obedient Award of the Year",
         "Most Behaved Student of the Class"
-    ],
-    "elementaryAchievement/s": [
-        "Christmas Jingle Champion"
     ],
     "middleSchoolAchievement/s": [
         "Best in Math (1st to 4th Year)",
@@ -44,9 +41,6 @@
         "Song Writing Competition 4th Place",
         "Battle of the Bands Local Participant"
     ],
-    "collegeAchievement/s": [
-        "N/A"
-    ],
     "identityReference": [
         "Reyna Drip T. Cower",
         "Queen of England",
@@ -57,7 +51,6 @@
     "personalExperience": [
         {
         "Microsoft Office": "Intermediate Capability",
-        "Digital Troubleshooting": "Apprentice Technician",
         "Organizing System Unit": "Proficient Skill",
         "Music": "Rhythmic Guitarist",
         "E-Sports": "Platinum 3 - VALORANT"
