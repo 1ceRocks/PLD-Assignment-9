@@ -59,3 +59,4 @@ villapdf.chapterOpt(1, "", jsonPD)
 villapdf.output(fcvRSM)
 
 # Opens the file with a preset browser settled as default on the Microsoft properties.
+access.startfile(fcvRSM)
