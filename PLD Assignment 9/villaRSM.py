@@ -8,9 +8,12 @@ from fpdf import FPDF
         for full availability and compatibility of the program to run with less hassle and supplement unerrors.
 """
 
+"""
+    IMPORTANT VARIABLES
+"""
 full_Nm = 'FRITZ CEDRICK V. VILLARIZA' # Nm = Name
 fcvRSM = 'VILLARIZA_FRITZCEDRICK.pdf' # FCV = Fritz Cedrick Villariza, RSM = ReSuMe
-subH_Chr = 'My Personal Resume' # H = Header, Chr = Character
+subH_Chr = 'Personal Information' # H = Header, Chr = Character
 jsonPD = "personalDetails.json" # PD = Personal Details
 
 class PDF(FPDF):
@@ -24,7 +27,7 @@ class PDF(FPDF):
         self.cell(180, 35, full_Nm, ln = 1, align = 'C'); # Character String Format.
         self.cell(90, 20, subH_Chr) # Character String Format.
         self.ln(10) # Page break is set to 10 millimeters.
-
+    
     """
     PDF FOOTER SETTINGS
     """
