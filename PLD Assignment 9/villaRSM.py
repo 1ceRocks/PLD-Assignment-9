@@ -28,6 +28,7 @@ import os as access; from fpdf import FPDF; import json
 IMPORTANT VARIABLES TO BE USED FOR PDF LAYOUT EXECUTION
 """
 full_hDr = 'MY PERSONAL RESUME' # hDr = HeaDer
+YrandSec = 'BSCOE 1-6' # Yr = Year, Sec = Section
 fcvRSM = 'VILLARIZA_FRITZCEDRICK.pdf' # FCV = Fritz Cedrick Villariza, RSM = ReSuMe
 
 # H = Header, Chr = Character
@@ -51,12 +52,16 @@ villapdf.add_page() # Adds a new page within the PDF File.
 """
 PDF HEADER SETTINGS
 """
-def header(villapdf):
+def layout_design(villapdf):
     villapdf.image('PLD_HEADER.png', 5, 10, 50, 0) # Located on the top-left corner on the PDF File Format
     villapdf.image('2x2_PICTURE.png', 165, 10, 40, 0) # The frame image of myvillapdf (Top-right).
+    villapdf.image('PROGRESS_BAR.png', 112, 248, 64.5, 0)
     villapdf.set_font('helvetica', 'B', 27) # The font present within a specified character string.
     villapdf.set_text_color(0, 0, 200) # RGB =  Blue Shade.
     villapdf.cell(180, 35, full_hDr, ln = 1, align = 'C'); # Character String Format.
+    villapdf.set_font('arial', 'B', 27)
+    villapdf.set_text_color(255, 165, 0) # RGB = Yellow SHade.
+    villapdf.cell(180, -10, YrandSec, ln = 0, align = 'C');
     villapdf.set_text_color(0, 0, 0) # Sets the text color by default = Black Shade.
 
 """
@@ -111,7 +116,7 @@ def json_4thbody(villapdf): # HONORABLE ACHIEVEMENTS
     villapdf.cell(147, 6, "F.  " + str(charac["honorableAchievement/s"][5]), ln = 10, align = 'C')
     villapdf.ln(0) # Line break is set to 0 millimeters.
     villapdf.cell(40, 6, "G.  " + str(charac["honorableAchievement/s"][6]), align = '')
-    villapdf.cell(143, 6, "G.  " + str(charac["honorableAchievement/s"][7]), ln = 10, align = 'C')
+    villapdf.cell(143, 6, "H.  " + str(charac["honorableAchievement/s"][7]), ln = 10, align = 'C')
     villapdf.ln(15) # Line break is set to 15 millimeters.
 
 def json_5thbody(villapdf): # SKILLS AND EXPERIENCES
@@ -148,7 +153,7 @@ def footer(villapdf):
 PDF LAYOUT EXECUTION SETTINGS
 """
 def generatePDF():
-    header(villapdf) # 1ST LAYOUT
+    layout_design(villapdf) # 1ST LAYOUT
     json_1stbody(villapdf) # 2ND LAYOUT
     json_2ndbody(villapdf) # 3RD LAYOUT
     json_3rdbody(villapdf) # 4TH LAYOUT
